@@ -3,7 +3,7 @@ import numpy as np
 import os
 import HandTrackingModule as htm
 
-brushThickness = 10
+brushThickness = 20
 eraserThickness = 60
 
 folderPath = "Header"
@@ -49,7 +49,7 @@ while True:
         # 4.If Selection Mode - Two Fingers Are Up
         if fingers[1] and fingers[2]:
             xp, yp =0, 0
-            print('Selection Mode')
+            # print('Selection Mode')
             # Checking For Changing Colors
             if y1 < 125:
                 if 250 < x1 < 450:
@@ -69,7 +69,7 @@ while True:
         # 5.If Drawing Mode - Index Finger Should Be Up
         if fingers[1] and fingers[2] == False:
             cv.circle(img, (x1, y1), 20, drawColor, cv.FILLED)
-            print('Drawing Mode')
+            # print('Drawing Mode')
             if xp == 0 and yp == 0:
                 xp, yp = x1, y1
             
